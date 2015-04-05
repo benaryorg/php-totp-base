@@ -11,6 +11,11 @@ the schema is somehow not documented yet.
 
 do not serve the files in `private/`.
 
+# what's missing
+
+* initialization
+* configuration
+
 # license
 
 WTFPL
