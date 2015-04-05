@@ -1,0 +1,6 @@
+[submodule "private/totp"]
+	path = private/totp
+	url = https://github.com/stolendata/totp
+[submodule "private/BaconQrCode"]
+	path = private/BaconQrCode
+	url = https://github.com/Bacon/BaconQrCode
