@@ -12,8 +12,8 @@
 		$user=$_POST['user'];
 		$usha=hash('sha512',$user);
 
-		$db=require('private/database.php');
-		require('private/totp/totp.php');
+		$db= require('../private/database.php');
+		require('../private/totp/totp.php');
 
 		$stat=$db->prepare('SELECT * FROM users WHERE name=?');
 		$stat->execute(array($usha));
@@ -45,7 +45,7 @@
 		<input name="pass" type="text" placeholder="TOTP Key" required/>
 		<button type="submit">Login</button>
 	</form>
-	Or register <a href="/register.php">here</a>!
+	Or register <a href="/public/register.php">here</a>!
 </body>
 </html>
 <?php
