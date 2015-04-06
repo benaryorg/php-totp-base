@@ -44,7 +44,7 @@
 		<input name="pass" type="text" placeholder="TOTP Key" required/>
 		<button type="submit">Login</button>
 	</form>
-	Or register <a href="/public/register.php">here</a>!
+	Or register <a href="/register.php">here</a>!
 </body>
 </html>
 <?php
