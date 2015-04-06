@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    require_once(__DIR__.'/../bootstrap.php');
 	$sid=session_id();
 	if(isset($_SESSION['user']))
 	{
