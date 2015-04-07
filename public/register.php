@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    require_once(__DIR__.'/../bootstrap.php');
 	$sid=session_id();
 	if(isset($_SESSION['user']))
 	{
@@ -7,9 +7,7 @@
 		exit;
 	}
 
-	require_once('private/BaconQrCode/vendor/autoload.php');
-	require_once('private/totp/totp.php');
-	$db=require_once('private/database.php');
+	$db= require_once('../private/database.php');
 
 	if(isset($_POST['user']))
 	{

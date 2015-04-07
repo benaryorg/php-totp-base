@@ -1,5 +1,5 @@
 <?php
-	session_start();
+    require_once(__DIR__.'/../bootstrap.php');
 	$sid=session_id();
 	if(isset($_SESSION['user']))
 	{
@@ -12,8 +12,7 @@
 		$user=$_POST['user'];
 		$usha=hash('sha512',$user);
 
-		$db=require('private/database.php');
-		require('private/totp/totp.php');
+		$db= require('../private/database.php');
 
 		$stat=$db->prepare('SELECT * FROM users WHERE name=?');
 		$stat->execute(array($usha));
@@ -27,8 +26,12 @@
 				$_SESSION['user']=$ret['id'];
 				$_SESSION['name']=$user;
 				header('Location: /');
-			}
-		}
+			}else{
+                echo "other fail";
+            }
+		}else{
+            echo "fail";
+        }
 	}
 	else
 	{
