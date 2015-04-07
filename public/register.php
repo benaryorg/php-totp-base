@@ -7,8 +7,6 @@
 		exit;
 	}
 
-	require_once('../private/BaconQrCode/vendor/autoload.php');
-	require_once('../private/totp/totp.php');
 	$db= require_once('../private/database.php');
 
 	if(isset($_POST['user']))
