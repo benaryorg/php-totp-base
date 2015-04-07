@@ -26,8 +26,12 @@
 				$_SESSION['user']=$ret['id'];
 				$_SESSION['name']=$user;
 				header('Location: /');
-			}
-		}
+			}else{
+                echo "other fail";
+            }
+		}else{
+            echo "fail";
+        }
 	}
 	else
 	{
